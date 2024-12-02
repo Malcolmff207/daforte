@@ -1,0 +1,188 @@
+/* General styling for the navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns the content to the start */
+  padding: 10px 20px;
+  background-color: #00446B;
+  color: white;
+  position: relative;
+  z-index: 100;
+}
+
+.logo img{
+  margin-right: auto; /* Pushes the logo to the left */
+  height: 40px; /* Adjust as needed */
+}
+.logo a{
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5dvw;
+  margin : 0;
+  transition: height 0.5s ease, opacity 0.5s ease-in-out;
+  width: 100%;
+}
+
+.nav-links li {
+  position: relative;
+  display: flex;
+  opacity: 1; /* Ensure visibility on desktop */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Keep animations */
+  margin-top: 5px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+  flex-grow: 1; /* Ensure the link expands to fill the space */
+}
+
+.nav-links a:hover {
+  color: #EE7057; /* Change hover color as needed */
+}
+
+/* Underline effect for desktop only */
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #EE7057; /* Color of the line */
+  transition: width 0.3s ease-in-out;
+  margin: 5px auto; /* Center the line */
+}
+
+/* Show line animation only on larger screens */
+@media (min-width: 769px) {
+  .nav-links a:hover::after {
+    width: 100%; /* Expand to full width on hover */
+  }
+
+  /* Hide chevron icon on desktop */
+  .chevron-icon {
+    display: none;
+  }
+}
+
+/* Chevron icon */
+.chevron-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: inline-flex; /* Keep icon inline */
+  margin-left: 40dvw;
+}
+
+/* Show chevron icon only when the menu is open */
+@media (max-width: 768px) {
+  .nav-links.open li .chevron-icon {
+    opacity: 0; /* Initially hidden */
+  }
+
+  .nav-links.open li:hover .chevron-icon {
+    opacity: 1; /* Show on hover */
+  }
+
+  /* Ensure underline is not shown when menu is toggled */
+  .nav-links.open a::after {
+    width: 0; /* Hide underline */
+  }
+}
+
+/* Responsive styling for mobile and tablet */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between; /* Align logo and hamburger to the sides */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%; /* Aligns the menu right below the navbar */
+    left: 0;
+    background-color: #00446B;
+    width: 100%;
+    height: 0; /* Start with height 0 */
+    flex-direction: column;
+    gap: 10px;
+    z-index: 99; /* Ensure it overlaps other content */
+    opacity: 0; /* Initially hidden */
+    overflow: hidden; /* Prevent content from spilling out */
+    transition: height 0.5s ease, opacity 0.5s ease-in-out; /* Maintain transition */
+  }
+
+  .nav-links.open {
+    height: auto; /* Allow it to expand fully */
+    padding: 2vw 0; /* Add padding */
+    opacity: 1; /* Make visible */
+  }
+
+  .nav-links li {
+    display: flex;
+    justify-content: space-between; /* Space text and chevron icon */
+    text-align: left; /* Align text to the left */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Keep animations */
+    width: 90vw; /* Adjust width as needed */
+  }
+
+  /* Apply staggered animation delays */
+  .nav-links.open li:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.25s;
+  }
+  .nav-links.open li:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+  }
+  .nav-links.open li:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.75s;
+  }
+  .nav-links.open li:nth-child(4) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
+  }
+}
+
+/* Ensures the navbar resets correctly on window resize */
+@media (min-width: 769px) {
+  .nav-links {
+    position: static; /* Reset position for desktop */
+    opacity: 1; /* Ensure it's visible */
+    height: auto; /* Ensure full height */
+    flex-direction: row; /* Row layout for desktop */
+    transition: opacity 0.5s ease; /* Allow opacity transition */
+  }
+
+  .nav-links.open {
+    height: auto; /* Prevent height issues */
+  }
+
+  .nav-links li {
+    opacity: 1; /* Ensure li are visible on desktop */
+    transform: translateY(0); /* Reset transform on desktop */
+  }
+}

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+.footer {
+    width: 100dvw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #00446B;
+    color: white;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    height: 75%; /* Adjusted to fit the new 50vh */
+}
+
+.footer-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Adjusted to space elements evenly */
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-evenly; /* Spacing links evenly horizontally */
+    width: 100%; /* Ensures it spans the width of the parent */
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Adjust this as needed for more spacing */
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: white;
+    font-size: clamp(0.8rem, 3vw, 1rem); 
+    border-radius: 5px; /* Gives the links a subtle rounded corner */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.menu-items a:hover {
+    color: #EE7057; /* Change hover color as needed */
+  }
+  
+  /* Underline effect for desktop only */
+  .menu-items a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #EE7057; /* Color of the line */
+    transition: width 0.3s ease-in-out;
+    margin: 5px auto; /* Center the line */
+  }
+
+  .menu-items a:hover::after {
+    width: 100%; /* Expand to full width on hover */
+  }
+
+
+.footer-socials {
+    display: flex;
+    justify-content: center; /* Aligns social icons at the bottom */
+    align-items: flex-end;
+    gap: 15px; /* Adds space between social icons */
+    width: 100%; /* Ensures it spans the width of the parent */
+    margin: 2% 0; /* Adjusts space around the social icons */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Rounds the divs */
+    background-color: #ffffff20; /* Semi-transparent white */
+    color: white;
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.social-icon:hover {
+    background-color: #EE7057; /* Changes background on hover */
+    color: #00446B; /* Changes icon color on hover */
+}
+
+.horizontal-separator {
+    height: 2px;
+    background-color: #EE7057;
+    margin: 0 2dvw; /* Aligns with the footer padding */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    height: 20%; /* Adjusted to fit the new 50vh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.5rem, 3vw, 1rem); 
+    margin: 0 5%; /* Adjusts space around the text */
+}
+
+#myLogo{
+    font-weight: 600;
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 1.3rem;
+}

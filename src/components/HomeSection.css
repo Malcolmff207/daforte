@@ -1,0 +1,43 @@
+.home-section {
+    width: 100dvw;
+    height: 100vh;
+    background: url('../images/HomeBackground.jpeg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    filter: contrast(1.2); 
+    background-color: #00446Bee;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: clamp(1.5rem, 4vw, 2rem); /* Adjusts between 1.5rem and 2rem based on viewport width */
+    font-weight: 700;
+    margin-top: 10%;
+}
+
+.overlay .logo {
+    width: 30vh;
+    margin: 10vh;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Adjusts between 1rem and 1.5rem based on viewport width */
+    margin-top: 15vh; 
+}
+
+.highlight {
+    color: #EE7057;
+}

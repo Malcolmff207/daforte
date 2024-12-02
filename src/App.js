@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import NavBar from './components/NavBar'; // Adjust path based on your folder structure
+import HomeSection from './components/HomeSection';
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
+import './App.css'; // Optional CSS for general app styling
+import './fontAwesomeSetup'; 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <HomeSection />
+      <ContactForm />
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
+
