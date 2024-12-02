@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/daforte/static/css/main.f5b813d0.chunk.css",
+    "main.js": "/daforte/static/js/main.4a4761c9.chunk.js",
+    "main.js.map": "/daforte/static/js/main.4a4761c9.chunk.js.map",
+    "runtime-main.js": "/daforte/static/js/runtime-main.f2005c62.js",
+    "runtime-main.js.map": "/daforte/static/js/runtime-main.f2005c62.js.map",
+    "static/js/2.fe1fb486.chunk.js": "/daforte/static/js/2.fe1fb486.chunk.js",
+    "static/js/2.fe1fb486.chunk.js.map": "/daforte/static/js/2.fe1fb486.chunk.js.map",
+    "static/js/3.2c10936e.chunk.js": "/daforte/static/js/3.2c10936e.chunk.js",
+    "static/js/3.2c10936e.chunk.js.map": "/daforte/static/js/3.2c10936e.chunk.js.map",
+    "index.html": "/daforte/index.html",
+    "precache-manifest.82ac9f126efa7bd60ed1f92e882f1987.js": "/daforte/precache-manifest.82ac9f126efa7bd60ed1f92e882f1987.js",
+    "service-worker.js": "/daforte/service-worker.js",
+    "static/css/main.f5b813d0.chunk.css.map": "/daforte/static/css/main.f5b813d0.chunk.css.map",
+    "static/js/2.fe1fb486.chunk.js.LICENSE.txt": "/daforte/static/js/2.fe1fb486.chunk.js.LICENSE.txt",
+    "static/media/DaforteLogoText.svg": "/daforte/static/media/DaforteLogoText.b0b87e48.svg",
+    "static/media/HomeSection.css": "/daforte/static/media/HomeBackground.681c8bc3.jpeg",
+    "static/media/Logo.svg": "/daforte/static/media/Logo.acf8a280.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2005c62.js",
+    "static/js/2.fe1fb486.chunk.js",
+    "static/css/main.f5b813d0.chunk.css",
+    "static/js/main.4a4761c9.chunk.js"
+  ]
+}
