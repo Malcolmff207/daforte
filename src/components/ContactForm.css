@@ -1,187 +1,242 @@
-.contact-form-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%; /* Ensures full width of the container */
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    gap: 20px;
-    box-sizing: border-box;
-    align-items: flex-start; /* Align items to the top */
-}
-
-.contact-info-container {
-    height: auto; /* Allow the content to determine height */
-    flex: 1 1 35%; /* Adjust the proportion to make more room for the map */
-    min-width: 300px;
+/* General Section Styling */
+.contact-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start; /* Align items at the top */
-    text-align: left;
-    padding: 0 10px; /* Adjust padding as needed */
-    margin-top: 0; /* Move the container up */
-    width: 100%; /* Ensure the container is full width */
-    box-sizing: border-box;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
 }
 
-.contact-form-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px; /* Add spacing below the title */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contact-details {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr); /* Creates 2 equal-width columns */
-    row-gap: 15px; /* Space between rows */
-    column-gap: 10dvw; /* Space between columns */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 400px;
 }
 
-
-.contact-item {
+.contact-card {
     display: flex;
     align-items: center;
-    gap: 10px;
-
-}
-
-.icon-container {
-    background-color: #EE7057;
-    border-radius: 50%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .contact-icon {
-    color: #fff;
-    font-size: 1.2rem; /* Reduce icon size for better fit */
-}
-
-.contact-info h4 {
-    margin: 0;
-    font-size: 1rem; /* Adjust text size */
-    font-weight: bold;
+    font-size: 1.5rem;
     color: #EE7057;
 }
 
-.contact-info p {
+.contact-card h4 {
+    font-size: 1rem;
+    font-weight: bold;
     margin: 0;
-    font-family: 'Montserrat', sans-serif; /* A good complementary font */
 }
 
-.ContactEmail {
+.contact-card p {
     font-size: 0.9rem;
+    margin: 5px 0 0;
+    color: #555;
 }
 
-.google-locations {
+/* Form Section Styling */
+.form-section {
     width: 100%;
-    flex: 1 1 60%; /* Expand the map container */
-}
-
-.map-container {
-    width: 100%;
-    height: 50vh; /* Increase the map height */
-    margin-top: 20px;
+    max-width: 600px;
+    background-color: #ffffff;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.contact-form-container {
-    flex: 1 1 45%;
-    min-width: 300px;
-    background-color: #f0f4f8;
-    border-radius: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.form-description {
+    margin: 10px 0 20px;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.form-group {
+.form-row {
     display: flex;
-    flex-direction: column;
-    position: relative; /* To position the icon inside the input */
+    gap: 10px;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    justify-content: space-between; /* Adds spacing between inputs */
 }
 
 .input-with-icon {
     position: relative;
+    flex: 1; /* Allows inputs to grow and align evenly */
 }
 
-.input-icon,
-.select-icon {
+.input-icon {
     position: absolute;
-    right: 12px; /* Ensures consistent space from the edge */
-    top: 55%;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #aaa;
-    pointer-events: none; /* Prevents the icon from blocking input interactions */
-    font-size: 1rem; /* Adjusts the size of the icon */
+    font-size: 1rem;
+    pointer-events: none; /* Prevent icon from blocking input interactions */
 }
 
-label {
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-input,
-textarea,
-select {
-    font-size: 1rem;
-    padding: 10px 40px 10px 10px; /* Adjusts space for the icon on the right */
+input, textarea {
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s;
-    appearance: none; /* Removes the default dropdown arrow */
-    background-color: #fff;
-    max-height: 30vh;
-    font-family: 'Montserrat', sans-serif; /* A good complementary font */
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-select:focus,
-input:focus,
-textarea:focus {
-    border-color: #00446B;
+input {
+    padding-right: 40px; /* Space for the right icon */
 }
 
 textarea {
-    resize: vertical; /* Allow vertical resizing */
-    font-size: 1rem;
-    padding: 10px 10px 10px 10px; /* Adjusts space for any icons */
+    resize: vertical;
+    min-height: 120px;
+    padding-right: 10px;
+}
+
+select {
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none; /* Removes default dropdown arrow for consistent styling */
+    padding-right: 40px; /* Space for the icon */
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #00446B;
     outline: none;
-    transition: border-color 0.3s;
-    background-color: #fff;
-    font-family: 'Montserrat', sans-serif; /* A good complementary font */
-    min-height: 20vh;
+}
+
+.input-with-icon select {
+    padding-right: 40px; /* Space for the right-aligned icon */
+}
+
+.input-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 1rem;
+    pointer-events: none;
 }
 
 .submit-button {
-    background-color: #00446B;
+    background-color: #EE7057;
     color: white;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s;
+    width: 100%;
 }
 
 .submit-button:hover {
-    background-color: #EE7057;
+    background-color: #00446B;
 }
 
-@media (max-width: 768px) {
+/* Map Section Styling */
+.map-section {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+.map-section h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.map-section p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row;
+        gap: 40px;
+    }
+
     .contact-details {
-        grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+        max-width: 400px;
+    }
+
+    .form-section {
+        max-width: 600px;
+    }
+
+    .form-row {
+        flex-direction: row;
+    }
+
+    .form-group input {
+        flex: 1;
+    }
+
+    textarea {
+        flex: 1 1 100%;
+    }
+
+    .submit-button {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-section {
+        padding: 60px 40px;
+    }
+
+    .map-section {
+        margin-top: 40px;
     }
 }

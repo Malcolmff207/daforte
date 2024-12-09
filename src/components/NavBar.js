@@ -35,19 +35,19 @@ function NavBar() {
       </div>
       <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <li>
-          <a href="#home">
+          <a href="https://daforte.com/">
             Home
             {isMenuOpen && <FontAwesomeIcon icon={faChevronRight} className="chevron-icon" />}
           </a>
         </li>
         <li>
-          <a href="#contact">
+          <a href="#contact-section">
             Join Daforte
             {isMenuOpen && <FontAwesomeIcon icon={faChevronRight} className="chevron-icon" />}
           </a>
         </li>
         <li>
-          <a href="#contact">
+          <a href="#contact-section">
             List Your Property
             {isMenuOpen && <FontAwesomeIcon icon={faChevronRight} className="chevron-icon" />}
           </a>
